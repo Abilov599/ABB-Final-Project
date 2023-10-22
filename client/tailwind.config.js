@@ -11,7 +11,8 @@ export default {
       },
       colors: {
         "open-blue": '#0095f6',
-        "dark-gray": "#737373"
+        "dark-gray": "#737373",
+        'secondary': '#fafafa'
       }
     },
   },

@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 export default function Header() {
   return (
     <header className="border-b py-2">
-      <div className="mx-auto max-w-4xl container flex items-center justify-between">
+      <div className="mx-auto w-3/5 container flex items-center justify-between">
         {/* LOGO */}
         <Link to={'/'} className="h-12 w-auto block">
           <img

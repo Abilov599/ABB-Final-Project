@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 interface CommentDescription {
   username: string;
   description: string;
@@ -14,14 +15,14 @@ export default function CommentDescription({
   const [isMore, setIsMore] = useState(false);
   return (
     <p className="-mt-3">
-      <span
+      <Link to={'/'}  
         className={classNames("font-semibold", {
           "text-sm": !sharedUser,
           "text-base": sharedUser,
         })}
-      >
+      >  
         {username}
-      </span>
+      </Link> {/* TODO: Link will be changed */}
 
       <span
         className={classNames("ml-2", {

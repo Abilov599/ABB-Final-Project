@@ -5,7 +5,7 @@ export default function MainLayout() {
   return (
     <>
       <Header />
-      <main className="w-3/5 mx-auto container py-10">
+      <main className="w-3/5 mx-auto container py-10 h-[90vh]">
         <Outlet />
       </main>
     </>

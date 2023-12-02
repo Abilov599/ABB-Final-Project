@@ -45,6 +45,11 @@ export const registerUser = async (req, res) => {
       password: hashedPassword,
     });
     const result = await newUser.save();
+    const token = sign({ _id: newUser._id }, process.env.SECRET_KEY);
+    res.cookie("jwt", token, {
+      withCredentials: true,
+      maxAge: 24 * 60 * 60 * 1000, // 1 day
+    });
     const { password, ...data } = result.toJSON();
     res.status(200).send(data);
   } catch (error) {

@@ -1,7 +1,9 @@
+import Timeline from "src/components/site/timeline";
+import { posts } from "src/mock/posts";
 export default function Home() {
     return (
-        <div>
-            Home
-        </div>
+        <>
+            <Timeline posts={posts}/>
+        </>
     )
 }
